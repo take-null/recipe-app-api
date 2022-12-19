@@ -1,12 +1,7 @@
 ---
 name: Checks
 
-on: 
-  push:
-    branches:
-      - main
-    path:
-      - 'recipie-app-api/**'
+on: [push]
 
 jobs:
   test-lint:
