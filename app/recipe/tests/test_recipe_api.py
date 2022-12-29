@@ -153,7 +153,7 @@ class PrivateRecipeApiTests(TestCase):
 
         payload = {
             'title': 'New recipe title',
-            'link':'https://example.com/new-recipe.pdf',
+            'link': 'https://example.com/new-recipe.pdf',
             'description': 'New recipe description.',
             'time_minutes': 10,
             'price': Decimal('2.50'),
