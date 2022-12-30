@@ -49,7 +49,7 @@ def create_user(**params):
 class PublicRecipeAPITests(TestCase):
     """Test unauthenticated API requests."""
 
-    def setUP(self):
+    def setUp(self):
         self.client = APIClient()
 
     def test_auth_required(self):
@@ -83,7 +83,7 @@ class PrivateRecipeApiTests(TestCase):
         self.assertEqual(res.data, serializer.data)
 
     def test_recipe_list_limited_to_user(self):
-        """Test list of recipes is limited to authenticated user."""
+        """Test List of recipes is limited to authenticated user."""
         other_user = create_user(
             email='other@example.com',
             password='test123',
