@@ -1,7 +1,7 @@
 """
 Tests for the tags APIs.
 """
-from django.contrib .auth import get_user_model
+from django.contrib.auth import get_user_model
 from django.urls import reverse
 from django.test import TestCase
 
@@ -73,7 +73,7 @@ class PrivateTagsApiTests(TestCase):
         self.assertEqual(res.data[0]['id'], tag.id)
 
     def test_update_tag(self):
-        """Test updateign a tag."""
+        """Test updating a tag."""
         tag = Tag.objects.create(user=self.user, name='After Dinner')
 
         payload = {'name': 'Dessert'}
