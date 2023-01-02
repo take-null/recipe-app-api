@@ -80,7 +80,7 @@ class PrivateRecipeApiTests(TestCase):
         self.user = create_user(email='user@example.com', password='test123')
         self.client.force_authenticate(self.user)
 
-    def test_retrive_recipes(self):
+    def test_retrieve_recipes(self):
         """Test retrieving a list of recipes."""
         create_recipe(user=self.user)
         create_recipe(user=self.user)
